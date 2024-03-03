@@ -1,0 +1,89 @@
+.detail-form {
+    .detail-all {
+        padding: 150px;
+
+        .detail-title {
+            margin-bottom: 50px;
+            text-align: center;
+
+            h1 {
+                padding: 20px 0px;
+                background-color: var(--background-home-page);
+            }
+        }
+
+        .detail-product-service {
+            display: flex;
+            justify-content: space-around;
+
+            .product-image {
+                border-radius: 10px;
+                border: 1px solid var(--border-gray);
+                overflow: hidden;
+                width: 500px;
+                height: 650px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .product-sell {
+                p {
+                    line-height: 22px;
+                    margin: 5px 0px;
+                }
+
+                .price {
+                    color: var(--main-red);
+                }
+
+                .btn-buy-product {
+                    text-align: center;
+                    margin-top: 50px;
+
+                    button {
+                        padding: 10px 15px;
+                        border: 1px solid var(--text-btn-home);
+                        border-radius: 4px;
+                        background-color: var(--text-btn-home);
+                        font-size: 17px;
+                        font-weight: 700;
+                        color: var(--main-white);
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+        .detail-product-content {
+            h2 {
+                margin-top: 70px;
+            }
+
+            p {
+                padding: 0px 50px;
+            }
+        }
+
+        .detail-product-evaluate {
+            display: flex;
+            align-items: center;
+            margin-top: 40px;
+
+            h2 {
+                margin: 0px;
+                padding-right: 10px;
+            }
+
+            p {
+                margin: 0px;
+            }
+        }
+    }
+}

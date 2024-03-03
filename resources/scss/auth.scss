@@ -1,0 +1,77 @@
+body {
+    margin: 0px;
+}
+
+.app-auth {
+    display: grid;
+
+    .banner-auth {
+        margin: 0px;
+
+        img {
+            width: 100%;
+            height: 100vh;
+        }
+    }
+
+    .box-form {
+        width: 280px;
+        display: grid;
+        padding: 40px;
+        position: absolute;
+        top: 100px;
+        left: 600px;
+        background-color: var(--background-form);
+        border-radius: 5px;
+
+        .logo-auth {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: auto;
+        }
+
+        .item-form {
+            input {
+                width: -webkit-fill-available;
+                height: 20px;
+                padding: 5px 10px;
+                border-radius: 4px;
+                border: 1px solid var(--border-gray);
+            }
+        }
+
+        .link-login {
+            margin-top: 5px;
+            margin-bottom: 30px;
+            color: var(--text-link-blue);
+        }
+
+        .btn-auth {
+            width: 80px;
+            height: 35px;
+            border-radius: 4px;
+            border: 1px solid var(--background-btn-primary);
+            margin: auto;
+            font-weight: 700;
+            color: var(--main-white);
+            background-color: var(--background-btn-primary);
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .link-forgot {
+            color: var(--text-link-blue);
+            margin-top: 25px;
+            text-align: center;
+        }
+    }
+}
+.notify-error {
+    margin-bottom: 15px;
+    color: var(--main-red);
+}
+.notify-success {
+    margin-bottom: 15px;
+    color: var(--main-green);
+}

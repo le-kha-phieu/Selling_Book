@@ -1,0 +1,41 @@
+.footer-form {
+    padding: 20px 70px;
+    background-color: var(--main-black);
+    color: var(--main-white);
+
+    .footer-item {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        .footer-item-info {
+            max-width: 300px;
+
+            .info-image {
+                display: flex;
+                align-items: center;
+
+                .logo {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+
+                .shop-name {
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .footer-item-polycies {
+            max-width: 300px;
+        }
+
+        .footer-item-contacts {
+            max-width: 300px;
+        }
+    }
+}
+
