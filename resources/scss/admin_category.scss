@@ -15,6 +15,10 @@
     left: 35%;
     border: 1px solid var(--border-gray);
 
+    form {
+        margin-bottom: 0px;
+    }
+
     a {
         color: var(--text-link-blue);
     }
@@ -78,52 +82,19 @@
             cursor: pointer;
         }
 
-        &.btn-update {
+        &.btn-update-category {
             background-color: var(--main-green);
             margin: 0px 30px 0px 70px;
         }
 
-        &.btn-delete {
+        &.btn-delete-category {
             background-color: var(--main-red);
             margin: 0px 30px;
+            border: none;
         }
     }
 }
 
 .notify-error {
     color: var(--main-red);
-}
-
-.box-delete {
-    position: absolute;
-    padding: 20px;
-    top: 195px;
-    left: 40%;
-    background-color: var(--main-white);
-    border: 1px solid var(--border-gray);
-    border-radius: 4px;
-    // display: none;
-
-    .btn-form {
-        margin-top: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-
-        p {
-            margin-bottom: 0px;
-            padding: 2px 10px;
-            border-radius: 4px;
-            color: var(--main-white);
-            cursor: pointer;
-        }
-
-        .btn-close {
-            background-color: var(--btn-gray);
-        } 
-
-        .btn-delete {
-            background-color: var(--main-red);
-        }
-    }
 }

@@ -33,6 +33,15 @@ header {
                 border-radius: 5px;
                 border: 1px solid var(--border-gray);
             }
+
+            button {
+                margin-left: -9%;
+                border: 1px solid var(--main-white);
+                background-color: var(--main-white);
+                &:hover {
+                    cursor: pointer;
+                }
+            }
         }
 
         .header-right {

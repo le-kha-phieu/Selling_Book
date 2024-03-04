@@ -4,8 +4,7 @@
 <div class="background">
     <img src="{{ Vite::asset('resources/image/baner-auth.jpg')}}" alt="">
 </div>
-<div class="product-create" id="boxAddProduct">
-    <a href="{{ route('view.admin') }}">Back</a>
+<div class="product-create">
     <div class="product-create-item">
         <form action="{{ route('create.product') }}" method="POST" enctype="multipart/form-data">
             @csrf
@@ -59,15 +58,9 @@
                 <span class="notify-error">{{ $message }}</span>
             @enderror
             <div class="product-create-submit">
+                <a href="{{ route('view.admin') }}">Back</a>
                 <button>Tạo</button>
             </div>
         </form>
-    </div>
-</div>
-<div class="product-box-delete">
-    <p>Bạn có chắn chắn muốn xóa sản phẩm này?</p>
-    <div class="btn-form">
-        <p class="btn-close">Cancel</p>
-        <p class="btn-delete">Delete</p>
     </div>
 </div>

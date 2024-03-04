@@ -12,11 +12,3 @@ window.addEventListener("scroll", function() {
 
     lastScrollTop = currentScrollTop
 })
-
-const cartShopping = document.getElementById('cartShopping')
-const cartBox = document.getElementById('cartBox')
-cartShopping.addEventListener('click', function() {
-    cartBox.style.display = 'block'
-    // cartBox.style.display = 'none'
-})
-
