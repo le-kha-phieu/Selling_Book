@@ -7,21 +7,16 @@
                 </div>
                 @foreach ($Categories as $category)
                     <div class="category-form">
-                        <h3>{{ $category->name }}</h3>
-                        <a class="btn-category btn-update">Sửa</a>
-                        <p class="btn-category btn-delete">Xóa</p>
+                        <h3 class="category-name">{{ $category->name }}</h3>
+                        <a href="{{ route('view.update.category', ['category' => $category])}}" class="btn-category btn-update-category">Sửa</a>
+                        <form method="POST" action="{{ route('delete.category', $category->id) }}">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn-category btn-delete-category">Xóa</button>
+                        </form>
                     </div>
                 @endforeach
             </div>
         </div>
-    </div>
-</div>
-
-
-<div class="box-delete category">
-    <p>Bạn có chắn chắn muốn xóa loại sách này?</p>
-    <div class="btn-form">
-        <p class="btn-close">Cancel</p>
-        <p class="btn-delete">Delete</p>
     </div>
 </div>

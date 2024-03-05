@@ -11,5 +11,3 @@
         <p>{{ $message }}</p>
     </div>
 @endif
-
-

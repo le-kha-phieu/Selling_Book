@@ -9,6 +9,7 @@ class Book extends Model
 {
     use HasFactory;
 
+    const LIMIT_PAGE_PRODUCT = 9;
     protected $table = "books";
 
     protected $fillable = [

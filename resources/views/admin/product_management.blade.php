@@ -12,8 +12,12 @@
                             <h2>{{ $product->title }}</h2>
                             <p>{{ $product->description }}</p>
                         </div>
-                        <a class="btn-product-management update" id="btnUpdate">Sửa</a>
-                        <p class="btn-product-management delete" id="btnDelete">Xóa</p>
+                        <a href="{{ route('view.update.product', ['product' => $product]) }}" class="btn-product-management btn-update-product">Sửa</a>
+                        <form method="POST" action="{{ route('delete.product', $product->id) }}">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn-product-management btn-delete-product">Xóa</button>
+                        </form>
                     </div>
                 @endforeach
                 @include('layouts.components.pagination')
@@ -21,4 +25,3 @@
         </div>
     </div>
 </div>
-

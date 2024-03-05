@@ -20,7 +20,12 @@
                     <img class="logo" src="{{ Vite::asset('resources/image/logo.png') }}" alt="">
                 </a>
                 <p class="logo-name">Books</p>
-                <input class="search" placeholder="Search books...">
+                <form action="{{ route('search.product') }}" method="GET">
+                    <input class="search" name="data" value="{{ request('data') }}" placeholder="Search books...">
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
             </div>
             <div class="header-right">
                 @if (!Auth::user())
@@ -37,9 +42,6 @@
                         <ul>
                             <li>
                                 <a href="">My order</a>
-                            </li>
-                            <li>
-                                <a href="">Change password</a>
                             </li>
                             <li>
                                 <a href="{{ route('logout') }}">Logout</a>
@@ -60,7 +62,8 @@
                         <a href="" alt="">
                             <h2>Đắc Nhân Tâm</h2>
                         </a>
-                        <a href="" alt="">Làm thế nào để chinh phục được bạn bè và có ảnh hưởng tới mọi người, khi bạn
+                        <a href="" alt="">Làm thế nào để chinh phục được bạn bè và có ảnh hưởng tới mọi
+                            người, khi bạn
                             muốn một cuộc sống tốt đẹp hơn với tất cả mọi người xung quanh hãy luôn nhớ rằng
                         </a>
                         <div class="btn-buy">
@@ -79,7 +82,8 @@
                         <a href="" alt="">
                             <h2>Đắc Nhân Tâm</h2>
                         </a>
-                        <a href="" alt="">Làm thế nào để chinh phục được bạn bè và có ảnh hưởng tới mọi người, khi bạn
+                        <a href="" alt="">Làm thế nào để chinh phục được bạn bè và có ảnh hưởng tới mọi
+                            người, khi bạn
                             muốn một cuộc sống tốt đẹp hơn với tất cả mọi người xung quanh hãy luôn nhớ rằng
                         </a>
                         <div class="btn-buy">
@@ -98,7 +102,8 @@
                         <a href="" alt="">
                             <h2>Đắc Nhân Tâm</h2>
                         </a>
-                        <a href="" alt="">Làm thế nào để chinh phục được bạn bè và có ảnh hưởng tới mọi người, khi bạn
+                        <a href="" alt="">Làm thế nào để chinh phục được bạn bè và có ảnh hưởng tới mọi
+                            người, khi bạn
                             muốn một cuộc sống tốt đẹp hơn với tất cả mọi người xung quanh hãy luôn nhớ rằng
                         </a>
                         <div class="btn-buy">

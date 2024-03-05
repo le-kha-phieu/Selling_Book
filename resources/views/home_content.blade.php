@@ -4,50 +4,31 @@
     <div class="home-form">
         <ul class="home-navbar">
             <li><a href="{{ route('view.home') }}">Trang chủ</a></li>
+            <li><a href="{{ route('view.store') }}">Cửa hàng</a></li>
+            <li><a href="">Sách bán chạy</a></li>
             <li><select class="book-categories" name="category_id">
-                    <option value="">Loại sách</option>
+                    <option value="{{ route('view.store') }}">Loại sách</option>
                     @foreach ($Categories as $category)
-                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        <option value="{{ route('search.product', ['id' => $category->id]) }}">{{ $category->name }}</option>
                     @endforeach
                 </select>
             </li>
-            <li><a href="">Sách bán chạy</a></li>
         </ul>
         <img class="home-main-image" src="{{ Vite::asset('resources/image/background-main.jpg') }}" alt="">
         <p class="home-slogan">" Một cuốn sách hay cho ta một điều tốt,<br> một người bạn tốt cho ta một điều hay"</p>
         <a class="store" href="{{ route('view.store') }}">Cửa hàng</a>
         <p class="category-home">Sản Phẩm Bán chạy</p>
         <div class="home-best-seller">
-            <div class="best-seller-list">
-                <div class="best-seller-form">
-                    <img class="best-seller-image"
-                        src="https://salabookz.com/wp-content/uploads/2022/03/dac-nhan-tam-768x768.jpg">
-                    <p class="best-seller-name">Đắc Nhân Tâm</p>
-                    <p class="best-seller-info">Làm thế nào để chinh phục được bạn bè và có ảnh hưởng tới mọi người, khi bạn
-                        muốn một cuộc sống tốt đẹp hơn với tất cả mọi người xung quanh hãy luôn nhớ rằng</p>
-                    <a href="" class="best-seller-buy">Mua ngay</a>
+            @foreach ($products as $product)
+                <div class="best-seller-list">
+                    <div class="best-seller-form">
+                        <a href="{{ route('detail.product', ['product' => $product]) }}" alt=""><img class="best-seller-image"src="{{ Storage::url($product->image_product) }}"></a>
+                        <p class="best-seller-name">{{ $product->title }}</p>
+                        <p class="best-seller-info">{{ $product->description }}</p>
+                        <a href="{{ route('detail.product', ['product' => $product]) }}" class="best-seller-buy">Mua ngay</a>
+                    </div>
                 </div>
-            </div>
-            <div class="best-seller-list">
-                <div class="best-seller-form">
-                    <img class="best-seller-image"
-                        src="https://salabookz.com/wp-content/uploads/2022/03/dac-nhan-tam-768x768.jpg">
-                    <p class="best-seller-name">Đắc Nhân Tâm</p>
-                    <p class="best-seller-info">Làm thế nào để chinh phục được bạn bè và có ảnh hưởng tới mọi người, khi bạn
-                        muốn một cuộc sống tốt đẹp hơn với tất cả mọi người xung quanh hãy luôn nhớ rằng</p>
-                    <a href="" class="best-seller-buy" href="">Mua ngay</a>
-                </div>
-            </div>
-            <div class="best-seller-list">
-                <div class="best-seller-form">
-                    <img class="best-seller-image"
-                        src="https://salabookz.com/wp-content/uploads/2022/03/dac-nhan-tam-768x768.jpg">
-                    <p class="best-seller-name">Đắc Nhân Tâm</p>
-                    <p class="best-seller-info">Làm thế nào để chinh phục được bạn bè và có ảnh hưởng tới mọi người, khi bạn
-                        muốn một cuộc sống tốt đẹp hơn với tất cả mọi người xung quanh hãy luôn nhớ rằng</p>
-                    <a href="" class="best-seller-buy">Mua ngay</a>
-                </div>
-            </div>
+            @endforeach
         </div>
         <p class="category-home">Nhà Xuất Bản</p>
         <div class="home-publisher">

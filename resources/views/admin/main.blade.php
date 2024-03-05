@@ -42,7 +42,6 @@
             @include('admin.category')
             @include('admin.product_management')
         </div>
-        @include('admin.update_product')
         
         <aside class="control-sidebar control-sidebar-dark">
         </aside>
