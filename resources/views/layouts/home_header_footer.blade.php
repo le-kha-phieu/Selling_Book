@@ -32,9 +32,11 @@
                     <a href="{{ route('view.register') }}"><button class="sign-up">Register</button></a>
                     <a href="{{ route('view.login') }}"><button class="login">Login</button></a>
                 @else
-                    <i class="fa-solid fa-cart-shopping" id="cartShopping">
-                        <span>3</span>
-                    </i>
+                    <a href="" alt="">
+                        <i class="fa-solid fa-cart-shopping" id="cartShopping">
+                            <span>0</span>
+                        </i>
+                    </a>
                     <a class="user-name" href="#">{{ Auth::user()->user_name }}</a>
                     <div class="user-avatar">
                         <img src="{{ Vite::asset('resources/image/image-user.jpg') }}" alt="">

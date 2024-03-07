@@ -38,6 +38,7 @@ header {
                 margin-left: -9%;
                 border: 1px solid var(--main-white);
                 background-color: var(--main-white);
+
                 &:hover {
                     cursor: pointer;
                 }
@@ -68,25 +69,29 @@ header {
                 margin-right: 50px;
             }
 
-            i {
-                font-size: 18px;
-                margin-right: 100px;
+            a {
+                color: var(--main-black);
+                i {
+                    font-size: 18px;
+                    margin-right: 100px;
 
-                span {
-                    width: 17px;
-                    height: 17px;
-                    position: absolute;
-                    background-color: var(--main-white);
-                    border-radius: 50%;
-                    text-align: center;
-                    font-size: 13px;
-                    top: 42px;
-                }
+                    span {
+                        width: 17px;
+                        height: 17px;
+                        position: absolute;
+                        background-color: var(--main-white);
+                        border-radius: 50%;
+                        text-align: center;
+                        font-size: 13px;
+                        top: 42px;
+                    }
 
-                &:hover {
-                    cursor: pointer;
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
             }
+
 
 
             .user-name {
