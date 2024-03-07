@@ -16,7 +16,7 @@
                     <p class="publisher">Nhà xuất bản: {{ $product->publisher }}</p>
                     <p class="publishing-year">Xuất bản năm: {{ $product->publishing_year }}</p>
                     <p class="delivery-time">Thời gian giao hàng: trong vòng 7 ngày</p>
-                    <h2 class="price">Giá: {{ $product->price }}</h2>
+                    <h2 class="price">Giá: {{ $product->price }}.đ</h2>
                     <div class="btn-buy-product">
                         <button>Mua ngay</button>
                     </div>

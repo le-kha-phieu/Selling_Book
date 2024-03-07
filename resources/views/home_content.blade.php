@@ -6,13 +6,6 @@
             <li><a href="{{ route('view.home') }}">Trang chủ</a></li>
             <li><a href="{{ route('view.store') }}">Cửa hàng</a></li>
             <li><a href="">Sách bán chạy</a></li>
-            <li><select class="book-categories" name="category_id">
-                    <option value="{{ route('view.store') }}">Loại sách</option>
-                    @foreach ($Categories as $category)
-                        <option value="{{ route('search.product', ['id' => $category->id]) }}">{{ $category->name }}</option>
-                    @endforeach
-                </select>
-            </li>
         </ul>
         <img class="home-main-image" src="{{ Vite::asset('resources/image/background-main.jpg') }}" alt="">
         <p class="home-slogan">" Một cuốn sách hay cho ta một điều tốt,<br> một người bạn tốt cho ta một điều hay"</p>
